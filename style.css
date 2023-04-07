@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all ease-in-out 0.3s;
+    font-size: 12px;
+    font-family: Kumbh Sans;
+}
+
+:root{
+    --Very_dark_desaturated_blue: hsl(238, 29%, 16%);
+    --Soft_red: hsl(14, 88%, 65%);
+    --Soft_violet: hsl(273, 75%, 66%);
+    --Soft_blue: hsl(240, 73%, 65%);
+    --Very_dark_grayish_blue: hsl(237, 12%, 33%);
+    --Dark_grayish_blue: hsl(240, 6%, 50%);
+    --Light_grayish_blue: hsl(240, 5%, 91%);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    transition: all ease-in-out 0;
+    background: linear-gradient(to top, var(--Soft_blue), var(--Soft_violet));
+    overflow: hidden;
+}
+
+main{
+    height: inherit;
+    width: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 920px;
+    height: 510px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    position: relative;
+    box-shadow: 0px 15px 30px 5px rgba(0, 0, 0, 0.289);
+}
+
+#box{
+    position: absolute;
+    left: -93px;
+    bottom: 110px;
+    z-index: 2;
+}
+
+.box_shadow{
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    bottom: 210px;
+    z-index: 1;
+    box-shadow: 0px 1px 30px 35px rgba(0, 0, 0, 0.43);
+}
+
+.left{
+    height: inherit;
+    width: 460px;
+    border-radius: 30px 0 0 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+#bg_pattern{
+    position: absolute;
+    right: 70px;
+    top: -295px;
+}
+
+#illustration_woman{
+    position: absolute;
+    right: 70px;
+    top: 80px;
+}
+
+.pattern_mobile{
+    display: none;
+}
+
+.illustration_mobile{
+    display: none;
+}
+
+.right{
+    height: inherit;
+    width: 460px;
+    border-radius: 0 30px 30px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 15px;
+}
+
+h1{
+    font-size: 30px;
+    color: var(--Very_dark_desaturated_blue);
+}
+
+.questionnaire{
+    height: fit-content;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 0 0;
+}
+
+.FAQ{
+    border-bottom: 1px solid var(--Light_grayish_blue);
+    padding: 10px 0;
+    overflow: hidden;
+    height: 43px;
+}
+
+.question{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0 0 5px 0;
+}
+
+h2{
+    height: fit-content;
+    padding-top: 4px;
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--Very_dark_grayish_blue);
+}
+
+h2:hover{
+    transition: all ease-in-out 0.2s;
+    color: var(--Soft_red);
+    cursor: pointer;
+}
+
+.question img{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.answer{
+    color: var(--Dark_grayish_blue);
+    padding: 5px 0;
+    display: flex;
+}
+
+
+@media screen and (max-width: 930px){
+    
+    .container{
+        width: 325px;
+        height: 535px;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 50px;
+    }
+
+    #box{
+        display: none;
+    }
+
+    .box_shadow{
+        display: none;
+    }
+
+    .left{
+        height: 20%;
+        width: 100%;
+        border-radius: 30px 30px 0 0;
+    }
+
+    #bg_pattern{
+        display: none;
+    }
+
+    #illustration_woman{
+        display: none;
+    }
+
+    .pattern_mobile{
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: 45px;
+    }
+
+    .illustration_mobile{
+        display: block;
+        scale: 0.7;
+        position: absolute;
+        top: -143px;
+    }
+
+    .right{
+        width: 325px;
+        height: 80%;
+        align-items: center;
+        justify-content: right;
+        padding:0;
+        border-radius: 0 0 30px 30px;
+
+    }
+
+    h1{
+        font-size: 35px;
+    }
+
+    .questionnaire{
+        padding: 0 41px;
+        gap: 10px;
+    }
+
+    .FAQ{
+        height: 39px;
+    }
+
+    .question img{
+        margin: 0;
+    }
+
+    h2{
+        padding-top: 0;
+    }
+}
+
+.show{
+    height: fit-content;
+}
+
+.rotate{
+    rotate: 180deg;
+}
+
+.bold{
+    font-weight: 700;
+    color: var(--Very_dark_desaturated_blue);
+}
